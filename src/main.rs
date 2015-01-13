@@ -27,7 +27,7 @@ fn main() {
     ('て', "te"),
     ('と', "to"),
 
-    ('は', "na"),
+    ('な', "na"),
     ('に', "ni"),
     ('ぬ', "nu"),
     ('ね', "ne"),
@@ -68,7 +68,8 @@ fn main() {
   ];
 
   loop {
-    let r = rand::random::<usize>() % hira_hash.len();
+    //let r = rand::random::<usize>() % hira_hash.len();
+    let r = (rand::random::<usize>() % 5) + 10;
 
     print!("{0} : ", hira_hash[r].0);
     let i = io::stdin().read_line().ok().expect("What was that?");
